@@ -3,14 +3,14 @@ package Planes;
 import models.ClassificationLevel;
 import models.ExperimentalTypes;
 
-public class experimentalPlane extends Plane{
+public class ExperimentalPlane extends Plane{
 
-    private ExperimentalTypes type;
+    private ExperimentalTypes experimentalTypes;
     private ClassificationLevel classificationLevel;
 
-    public experimentalPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, ExperimentalTypes type, ClassificationLevel classificationLevel) {
+    public ExperimentalPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, ExperimentalTypes experimentalTypes, ClassificationLevel classificationLevel) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
-        this.type = type;
+        this.experimentalTypes = experimentalTypes;
         this.classificationLevel = classificationLevel;
     }
 
@@ -18,8 +18,8 @@ public class experimentalPlane extends Plane{
         return classificationLevel;
     }
 
-    public void setClassificationLevel(ClassificationLevel classificationLevel){
-        this.classificationLevel = classificationLevel;
+    public ExperimentalTypes getExperimentalTypes(){
+        return experimentalTypes;
     }
 
     @Override
@@ -35,7 +35,7 @@ public class experimentalPlane extends Plane{
     @Override
     public String toString() {
         return "experimentalPlane{" +
-                "model='" + model + '\'' +
-                '}';
+                "model='" + model + "\'" +
+                "}";
     }
 }
